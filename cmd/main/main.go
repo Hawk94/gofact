@@ -11,5 +11,5 @@ func main() {
 	svc = app.NewLoggingService(svc)
 
 	apiServer := app.NewApiServer(svc)
-	log.Fatal(apiServer.Start(":3000"))
+	log.Fatal(apiServer.Start(":8080"))
 }
