@@ -26,11 +26,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Google Auth
+      - name: Authenticate with Google Cloud
         id: auth
-        uses: "google-github-actions/auth@v0"
+        uses: "google-github-actions/auth@v1"
         with:
-          token_format: "access_token"
+          # token_format: "access_token"
           workload_identity_provider: "projects/765144760189/locations/global/workloadIdentityPools/gh-pool/providers/gh-provider"
           service_account: "github-actions-service-account@miller-376116.iam.gserviceaccount.com"
 
