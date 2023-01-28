@@ -20,7 +20,8 @@ jobs:
       id-token: "write"
 
     env:
-      IMAGE_NAME: ghcr.io/hawk94/gofact:main
+      REGISTRY: ghcr.io
+      IMAGE_NAME: ${{ github.repository }}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
