@@ -32,6 +32,12 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.PAT }}
 
+      - name: Authenticate with Google Cloud
+        uses: "google-github-actions/auth@v1"
+        with:
+          workload_identity_provider: "projects/765144760189/locations/global/workloadIdentityPools/gh-pool/providers/gh-provider"
+          service_account: "github-actions-service-account@miller-376116.iam.gserviceaccount.com"
+
       - id: deploy
         name: Deploy Docker image
         uses: "google-github-actions/deploy-cloudrun@v1"
