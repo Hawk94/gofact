@@ -31,8 +31,8 @@ jobs:
         uses: "google-github-actions/auth@v1"
         with:
           token_format: "access_token"
-          workload_identity_provider: "projects/765144760189/locations/global/workloadIdentityPools/gh-pool/providers/gh-provider"
-          service_account: "github-actions-service-account@miller-376116.iam.gserviceaccount.com"
+          workload_identity_provider: "projects/765144760189/locations/global/workloadIdentityPools/gh-id-pool/providers/gh-provider"
+          service_account: "github-actions-oidc@miller-376116.iam.gserviceaccount.com"
 
       # NOTE: Alternative option - authentication via credentials json
       # - name: Google Auth
